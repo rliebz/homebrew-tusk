@@ -1,9 +1,9 @@
 class Tusk < Formula
   desc "A tusk runner built with simplicity in mind"
   homepage "https://github.com/rliebz/tusk"
-  url "https://github.com/rliebz/tusk/releases/download/v0.3.3/tusk_0.3.3_darwin_amd64.tar.gz"
-  version "0.3.3"
-  sha256 "5454eec661f6cd031b13b8d732b9b221b7c589e5c0c1d8067185e5ad40cade08"
+  url "https://github.com/rliebz/tusk/releases/download/v0.3.4/tusk_0.3.4_darwin_amd64.tar.gz"
+  version "0.3.4"
+  sha256 "b08c34857926a55b344ae43fdfeb4ddc10dc0dd31e4dea69169ee7e15746c8c4"
 
   def install
     bin.install "tusk"
