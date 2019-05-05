@@ -1,9 +1,9 @@
 class Tusk < Formula
   desc "The modern task runner"
   homepage "https://github.com/rliebz/tusk"
-  url "https://github.com/rliebz/tusk/releases/download/v0.4.4/tusk_0.4.4_darwin_amd64.tar.gz"
-  version "0.4.4"
-  sha256 "d154b44da8d6ad5589c3883ad263a3cfc3c23c8bc862e727706c1c6ae60e5b37"
+  url "https://github.com/rliebz/tusk/releases/download/v0.4.5/tusk_0.4.5_darwin_amd64.tar.gz"
+  version "0.4.5"
+  sha256 "5d79aa8cfef53b7c1d6a5ead7a7fdd8aa81f943d186418a4552689a7afbbea1c"
 
   def install
     bin.install "tusk"
