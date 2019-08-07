@@ -2,14 +2,14 @@
 class Tusk < Formula
   desc "The modern task runner"
   homepage "https://github.com/rliebz/tusk"
-  version "0.4.6"
+  version "0.4.7"
 
   if OS.mac?
-    url "https://github.com/rliebz/tusk/releases/download/v0.4.6/tusk_0.4.6_darwin_amd64.tar.gz"
-    sha256 "eaa21590faa90aef1fbf50899ae402cb5400823ef9e6962f02a10960f5a7ddb4"
+    url "https://github.com/rliebz/tusk/releases/download/v0.4.7/tusk_0.4.7_darwin_amd64.tar.gz"
+    sha256 "a72a54ffef26d9ec11e294883926793b6a9716067c7d8f567fc747ceee7f646c"
   elsif OS.linux?
-    url "https://github.com/rliebz/tusk/releases/download/v0.4.6/tusk_0.4.6_linux_amd64.tar.gz"
-    sha256 "e5db65e96bdd5a682f3ca9bf0ca7c83fb773d8dc119e118029c98b6bed64308b"
+    url "https://github.com/rliebz/tusk/releases/download/v0.4.7/tusk_0.4.7_linux_amd64.tar.gz"
+    sha256 "4c764392d753d53301cf3fcc0685eb7cd25a2bd69e98bef855c9b613b2a5dac6"
   end
 
   def install
