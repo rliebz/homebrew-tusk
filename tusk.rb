@@ -2,14 +2,17 @@
 class Tusk < Formula
   desc "The modern task runner"
   homepage "https://github.com/rliebz/tusk"
-  version "0.4.7"
+  version "0.5.0"
+  bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/rliebz/tusk/releases/download/v0.4.7/tusk_0.4.7_darwin_amd64.tar.gz"
-    sha256 "a72a54ffef26d9ec11e294883926793b6a9716067c7d8f567fc747ceee7f646c"
+    url "https://github.com/rliebz/tusk/releases/download/v0.5.0/tusk_0.5.0_darwin_amd64.tar.gz"
+    sha256 "43e9cb942b41395235434dd4d057d38e8c64cad6d790364825733f51e127c87f"
   elsif OS.linux?
-    url "https://github.com/rliebz/tusk/releases/download/v0.4.7/tusk_0.4.7_linux_amd64.tar.gz"
-    sha256 "4c764392d753d53301cf3fcc0685eb7cd25a2bd69e98bef855c9b613b2a5dac6"
+    if Hardware::CPU.intel?
+      url "https://github.com/rliebz/tusk/releases/download/v0.5.0/tusk_0.5.0_linux_amd64.tar.gz"
+      sha256 "0c05ef72777dbb6c463bc69fe357ce2610eeec640a08357e2b1e9dde225dd91e"
+    end
   end
 
   def install
