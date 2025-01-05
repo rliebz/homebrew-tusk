@@ -5,12 +5,12 @@
 class Tusk < Formula
   desc "The modern task runner"
   homepage "https://github.com/rliebz/tusk"
-  version "0.7.1"
+  version "0.7.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/rliebz/tusk/releases/download/v0.7.1/tusk_0.7.1_darwin_arm64.tar.gz"
-      sha256 "f2d6941663a7f3c98c888b64273023fd517158c0fee24732c7bf1e334c54f53d"
+    if Hardware::CPU.intel?
+      url "https://github.com/rliebz/tusk/releases/download/v0.7.2/tusk_0.7.2_darwin_amd64.tar.gz"
+      sha256 "2a3d66a996bf2a6ad6ecf0acf761f99924eadd5f5480203dd32e7688142456c6"
 
       def install
         bin.install "tusk"
@@ -20,9 +20,9 @@ class Tusk < Formula
         zsh_completion.install "appcli/completion/_tusk"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rliebz/tusk/releases/download/v0.7.1/tusk_0.7.1_darwin_amd64.tar.gz"
-      sha256 "88ecb36a79595e3d628f14118749af14f94f97d7bba5cc4b9b9a2df0054736a3"
+    if Hardware::CPU.arm?
+      url "https://github.com/rliebz/tusk/releases/download/v0.7.2/tusk_0.7.2_darwin_arm64.tar.gz"
+      sha256 "ab039a0b31da91bec34b603dea967d6d01a119fd2a652e6f9ca6cf56b3a65bfe"
 
       def install
         bin.install "tusk"
@@ -35,40 +35,46 @@ class Tusk < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/rliebz/tusk/releases/download/v0.7.1/tusk_0.7.1_linux_arm.tar.gz"
-      sha256 "07a8aecd21d1e219e3ffa34239ca294c5cfc2117cbf8ed1f7d3734ea7e16dc62"
-
-      def install
-        bin.install "tusk"
-
-        bash_completion.install "appcli/completion/tusk-completion.bash"
-        fish_completion.install "appcli/completion/tusk.fish"
-        zsh_completion.install "appcli/completion/_tusk"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/rliebz/tusk/releases/download/v0.7.1/tusk_0.7.1_linux_amd64.tar.gz"
-      sha256 "d8a5ff2d6f7ce500c1ef3576c46e5d72bb4a4d7260fd21ba6f44ce3ef1455222"
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/rliebz/tusk/releases/download/v0.7.2/tusk_0.7.2_linux_amd64.tar.gz"
+        sha256 "1c5e7d7636798dcfb95838330e9a4ab36a734327a9edfaf4dc3cf088f7927417"
 
-      def install
-        bin.install "tusk"
+        def install
+          bin.install "tusk"
 
-        bash_completion.install "appcli/completion/tusk-completion.bash"
-        fish_completion.install "appcli/completion/tusk.fish"
-        zsh_completion.install "appcli/completion/_tusk"
+          bash_completion.install "appcli/completion/tusk-completion.bash"
+          fish_completion.install "appcli/completion/tusk.fish"
+          zsh_completion.install "appcli/completion/_tusk"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rliebz/tusk/releases/download/v0.7.1/tusk_0.7.1_linux_arm64.tar.gz"
-      sha256 "8e14830a48a5d8af95032bf7f0916ee2216243f24b9e3ba0c545b2112da430b3"
+    if Hardware::CPU.arm?
+      if !Hardware::CPU.is_64_bit?
+        url "https://github.com/rliebz/tusk/releases/download/v0.7.2/tusk_0.7.2_linux_arm.tar.gz"
+        sha256 "634ca9ce3d98dd481e80891f433b0af38495865f2b177865b85778c461d00cb3"
 
-      def install
-        bin.install "tusk"
+        def install
+          bin.install "tusk"
 
-        bash_completion.install "appcli/completion/tusk-completion.bash"
-        fish_completion.install "appcli/completion/tusk.fish"
-        zsh_completion.install "appcli/completion/_tusk"
+          bash_completion.install "appcli/completion/tusk-completion.bash"
+          fish_completion.install "appcli/completion/tusk.fish"
+          zsh_completion.install "appcli/completion/_tusk"
+        end
+      end
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/rliebz/tusk/releases/download/v0.7.2/tusk_0.7.2_linux_arm64.tar.gz"
+        sha256 "a9c08834c8a3d3e9366a897d0307547691e2076d4f4de4b909a8e089bdca8dfa"
+
+        def install
+          bin.install "tusk"
+
+          bash_completion.install "appcli/completion/tusk-completion.bash"
+          fish_completion.install "appcli/completion/tusk.fish"
+          zsh_completion.install "appcli/completion/_tusk"
+        end
       end
     end
   end
