@@ -5,12 +5,12 @@
 class Tusk < Formula
   desc "The modern task runner"
   homepage "https://github.com/rliebz/tusk"
-  version "0.7.2"
+  version "0.7.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rliebz/tusk/releases/download/v0.7.2/tusk_0.7.2_darwin_amd64.tar.gz"
-      sha256 "2a3d66a996bf2a6ad6ecf0acf761f99924eadd5f5480203dd32e7688142456c6"
+      url "https://github.com/rliebz/tusk/releases/download/v0.7.3/tusk_0.7.3_darwin_amd64.tar.gz"
+      sha256 "960225d4f0fdb4afefc8859e516ec5f3984887a866f694c07f290e9e1df05197"
 
       def install
         bin.install "tusk"
@@ -21,8 +21,8 @@ class Tusk < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rliebz/tusk/releases/download/v0.7.2/tusk_0.7.2_darwin_arm64.tar.gz"
-      sha256 "ab039a0b31da91bec34b603dea967d6d01a119fd2a652e6f9ca6cf56b3a65bfe"
+      url "https://github.com/rliebz/tusk/releases/download/v0.7.3/tusk_0.7.3_darwin_arm64.tar.gz"
+      sha256 "7058a73f3a5445ba311c4cd3c10696536135bd975dfc5c60f4be4f12b5fcf0e0"
 
       def install
         bin.install "tusk"
@@ -37,8 +37,8 @@ class Tusk < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/rliebz/tusk/releases/download/v0.7.2/tusk_0.7.2_linux_amd64.tar.gz"
-        sha256 "1c5e7d7636798dcfb95838330e9a4ab36a734327a9edfaf4dc3cf088f7927417"
+        url "https://github.com/rliebz/tusk/releases/download/v0.7.3/tusk_0.7.3_linux_amd64.tar.gz"
+        sha256 "1eb47f2815fd9b59e8def42cf1f1a1c8f369cb7e4124190710e6645876f85b7d"
 
         def install
           bin.install "tusk"
@@ -51,8 +51,8 @@ class Tusk < Formula
     end
     if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/rliebz/tusk/releases/download/v0.7.2/tusk_0.7.2_linux_arm.tar.gz"
-        sha256 "634ca9ce3d98dd481e80891f433b0af38495865f2b177865b85778c461d00cb3"
+        url "https://github.com/rliebz/tusk/releases/download/v0.7.3/tusk_0.7.3_linux_arm.tar.gz"
+        sha256 "5f3ec0c86f58da793c86905423dbe32f4a6170d4c5a87a27482f332e44b5d892"
 
         def install
           bin.install "tusk"
@@ -65,8 +65,8 @@ class Tusk < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/rliebz/tusk/releases/download/v0.7.2/tusk_0.7.2_linux_arm64.tar.gz"
-        sha256 "a9c08834c8a3d3e9366a897d0307547691e2076d4f4de4b909a8e089bdca8dfa"
+        url "https://github.com/rliebz/tusk/releases/download/v0.7.3/tusk_0.7.3_linux_arm64.tar.gz"
+        sha256 "8a2444a6748865307eb281ce730a183e1e11cb3655965c6a05d949731ceb6670"
 
         def install
           bin.install "tusk"
